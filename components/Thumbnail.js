@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { forwardRef } from 'react'
 
-const Thumbnail = forwardRef(({result} , ref) => {
+const Thumbnail = ({result} , ref) => {
    
     const BASE_URL = 'https://image.tmdb.org/t/p/original'
 
@@ -36,6 +36,6 @@ const Thumbnail = forwardRef(({result} , ref) => {
     
    
   )
-} )
+} 
 
-export default Thumbnail
+export default forwardRef(Thumbnail)
